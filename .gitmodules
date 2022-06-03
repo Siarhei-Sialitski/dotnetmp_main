@@ -1,0 +1,9 @@
+[submodule "dotnetmp_carting"]
+	path = dotnetmp_carting
+	url = https://github.com/Siarhei-Sialitski/dotnetmp_carting.git
+[submodule "dotnetmp_catalog"]
+	path = dotnetmp_catalog
+	url = https://github.com/Siarhei-Sialitski/dotnetmp_catalog.git
+[submodule "dotnetmp_sharedkernel"]
+	path = dotnetmp_sharedkernel
+	url = https://github.com/Siarhei-Sialitski/dotnetmp_sharedkernel.git
