@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "1d6b117e-2a0d-47ea-b4f7-d68c3df0e89c",
+		"name": "DotNetMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Carting",
+			"item": [
+				{
+					"name": "Add Item To Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"88188ea8-652e-4e5c-b7dc-63ca9a5e918a\",\r\n    \"Name\": \"TV\",\r\n    \"Image\": {\r\n        \"Url\": \"http://image.com\",\r\n        \"AltText\": \"Image\"\r\n    },\r\n    \"Price\": \"100\",\r\n    \"Quantity\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7153/carts/af9ebaa9-1682-4a6f-a514-3e3bae657ca3/items",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7153",
+							"path": [
+								"carts",
+								"af9ebaa9-1682-4a6f-a514-3e3bae657ca3",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Item From Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7153/carts/af9ebaa9-1682-4a6f-a514-3e3bae657ca3/items/88188ea8-652e-4e5c-b7dc-63ca9a5e918a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7153",
+							"path": [
+								"carts",
+								"af9ebaa9-1682-4a6f-a514-3e3bae657ca3",
+								"items",
+								"88188ea8-652e-4e5c-b7dc-63ca9a5e918a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cart Items",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"88188ea8-652e-4e5c-b7dc-63ca9a5e918a\",\r\n    \"Name\": \"TV\",\r\n    \"Image\": {\r\n        \"Url\": \"http://image.com\",\r\n        \"AltText\": \"Image\"\r\n    },\r\n    \"Price\": \"100\",\r\n    \"Quantity\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7153/carts/af9ebaa9-1682-4a6f-a514-3e3bae657ca3/items",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7153",
+							"path": [
+								"carts",
+								"af9ebaa9-1682-4a6f-a514-3e3bae657ca3",
+								"items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Watches\",\r\n        \"image\": null,\r\n        \"parentCategoryId\": null\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7197/api/categories",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7197",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7197/api/categories/27172db9-5d6c-4b75-e7c4-08da5678c9cc",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7197",
+									"path": [
+										"api",
+										"categories",
+										"27172db9-5d6c-4b75-e7c4-08da5678c9cc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Items",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Watches\",\r\n    \"image\": null,\r\n    \"categoryId\": \"c0613068-4dfb-4aaf-e7c6-08da5678c9cc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7197/api/items",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7197",
+									"path": [
+										"api",
+										"items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
